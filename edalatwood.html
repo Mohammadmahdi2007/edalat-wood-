@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات چوب عدالت</title>
+    <style>
+        body {
+            background-color: #f9f9f9; /* رنگ پس زمینه روشن */
+            font-family: Arial, sans-serif; /* فونت صفحه */
+            text-align: center; /* متن در مرکز صفحه */
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px; /* فاصله داخلی */
+        }
+        h1 {
+            font-size: 48px; /* اندازه فونت عنوان */
+            color: #333; /* رنگ متن عنوان */
+        }
+        .datetime {
+            font-size: 14px; /* اندازه فونت تاریخ و ساعت */
+            color: #777; /* رنگ متن تاریخ و ساعت */
+            text-align: right; /* متن راست چین */
+        }
+        p {
+            font-size: 20px; /* اندازه فونت توضیحات */
+            color: #ffffff; /* رنگ متن توضیحات */
+            margin: 20px; /* فاصله اطراف توضیحات */
+            line-height: 1.5; /* فاصله بین خطوط */
+        }
+        select {
+            font-size: 18px; /* اندازه فونت لیست کشویی */
+            padding: 10px; /* فاصله داخلی لیست کشویی */
+            margin-top: 20px; /* فاصله بالای لیست کشویی */
+            border-radius: 5px; /* لبه‌های گرد */
+            border: 1px solid #ccc; /* حاشیه */
+            background-color: #fff; /* رنگ پس زمینه لیست کشویی */
+        }
+        .portfolio {
+            display: none; /* مخفی کردن بخش نمونه کارها در ابتدا */
+            margin-top: 50px; /* فاصله از بالا */
+        }
+        img {
+            width: 200px; /* اندازه عکس */
+            height: auto; /* حفظ نسبت ابعاد */
+            margin: 10px; /* فاصله بین عکس‌ها */
+            border-radius: 8px; /* لبه‌های گرد عکس‌ها */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* سایه برای عکس‌ها */
+        }
+        .footer {
+            margin-top: 50px; /* فاصله از بالای فوتر */
+            background-color: #000000; /* رنگ پس زمینه فوتر */
+            color: rgb(255, 255, 255); /* رنگ متن فوتر */
+            padding: 20px; /* فاصله داخلی */
+            text-align: left; /* متن چپ چین */
+            border-top: 4px solid #FFD700; /* حاشیه بالای فوتر */
+            
+        }
+        .footer h3 {
+            margin-top: 0; /* حذف فاصله بالای عنوان فوتر */
+        }
+    </style>
+    <script>
+        function showPortfolio(category) {
+            // مخفی کردن همه بخش‌های نمونه کارها
+            var portfolios = document.getElementsByClassName('portfolio');
+            for (var i = 0; i < portfolios.length; i++) {
+                portfolios[i].style.display = 'none';
+            }
+            // نمایش بخش مرتبط با دسته بندی انتخاب شده
+            if (category) {
+                document.getElementById(category).style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>خدمات چوب عدالت</h1>
+        <div class="datetime" id="datetime"></div>
+    </div>
+    <p> بهترین محصولات چوبی در نجف آبادرا از ما بخواهید هدف ماارائه بهترین محصولات چوبی و رضایت مندی مشتریان است اعتبارما کیفیت کار ماست .</p>
+    <label for="category">دسته بندی مورد نظر را انتخاب کنید:</label>
+    <select name="category" id="category" onchange="showPortfolio(this.value)">
+        <option value="">-- انتخاب کنید --</option>
+        <option value="cabinets">کابینت</option>
+        <option value="beds">تخت</option>
+        <option value="wardrobes">کمد</option>
+        <option value="stairs">پله</option>
+    </select>
+    <div id="cabinets" class="portfolio">
+        <h2>نمونه کارهای کابینت</h2>
+        <img src="cabinets1.jpg" alt="کابینت نمونه 1">
+        <img src="cabinets2.jpg" alt="کابینت نمونه 2">
+        <img src="cabinets3.jpg" alt="کابینت نمونه 3">
+    </div>
+    <div id="beds" class="portfolio">
+        <h2>نمونه کارهای تخت</h2>
+        <img src="uwp4491270.webp" alt="تخت نمونه 1">
+        <img src="uwp4491270.webp" alt="تخت نمونه 2">
+        <img src="uwp4491270.webp" alt="تخت نمونه 3">
+    </div>
+    <div id="wardrobes" class="portfolio">
+        <h2>نمونه کارهای کمد</h2>
+        <img src="wardrobes1.jpg" alt="کمد نمونه 1">
+        <img src="wardrobes2.jpg" alt="کمد نمونه 2">
+        <img src="wardrobes3.jpg" alt="کمد نمونه 3">
+    </div>
+    <div id="stairs" class="portfolio">
+        <h2>نمونه کارهای پله</h2>
+        <img src="stairs1.jpg" alt="پله نمونه 1">
+        <img src="stairs2.jpg" alt="پله نمونه 2">
+        <img src="stairs3.jpg" alt="پله نمونه 3">
+    </div>
+    <div class="footer">
+        <h3>اطلاعات تماس</h3>
+        <p>آدرس: نجف آباد خیابان 15 خرداد مرکزی خیابان 17 شهریور مجاور مدرسه محمد امین</p>
+        <p>شماره تماس: 09330913147</p>
+        <p>حق نشر برای سایت محفوظ است</p>
+    </div>
+    <script>
+        // نمایش تاریخ و ساعت در بالای صفحه
+        function updateTime() {
+            const now = new Date();
+            const options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+            document.getElementById('datetime').innerText = now.toLocaleString('fa-IR', options);
+        }
+        // به‌روزرسانی تاریخ و ساعت هر ثانیه
+        setInterval(updateTime, 1000);
+        updateTime(); // برای اولین بار به‌روز رسانی
+    </script>
+</body>
+</html>
